@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="navbar-header2">
+
+        <div class="center-block">
+
+            <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+          <ol class="nav-header-list">
+                       <li><a href="{{ path('homepage') }}">Home </a></li>
+                       <li><a href="{{  path('about')  }}">O nas</a></li>
+                       <li><a href="{{  path('gallery')  }}">Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">Kontakt</a></li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div  style="margin-top:100px">
+        <h1> O Nas  </h1>
+        </div>
+        <div class="field">
+            <p> 
+Studenckie Koło Podróznicze "Czwórka" powstało w 1957 roku jako pierwsze na SGGW koło PTTK. W historii klubu momenty spektakularnej ilości członków przeplatały się z niską frekwencją, ale nigdy nie nastał zupełny przestój w działaniu.
+Coraz to nowe odradzanie się klubu możliwe było dzięki zapałowi i determinacji członków. Klimat jaki ma w sobie ta organizacja przyciągnął i zatrzymał wielu wspaniałych organizatorów i zapalonych podróżników. 
+Głównym obszarem naszego zainteresowania są piesze wędrówki.
+</br>
+</br>
+"Poznałem uroki klubowych wyjazdów - chodzenie z plecakiem po szlakach i bezdrożach przy niekoniecznie najlepszej pogodzie, poznawanie nowych miejsc, spanie Bóg wie gdzie i smak wspólnie sporządzonego posiłku na ognisku gdzieś pośród gór."
+</br>
+</br>
+Tak czwórkowy styl opisuje aktywnie działający, wieloletni prezes klubu Bartosz Kozak. Ta tradycja od lat się nie zmienia, kochamy wędrowanie i w góry wyjeżdzamy najczęściej jak możemy. Nie zamykamy się jednak na inne formy szeroko pojętej turystyki - organizujemy wyjazdy międzymiastowe, lubimy też poznawać zakątki miejsc w których żyjemy na co dzień. Czwórka staje się stylem życia - uczy postrzegać świat z prespektywy turysty, z otwartym i żądnym wrażeń umysłem, gotowym chłonąć piękno każdej chwili, nie tylko podczas wycieczek. W klubie spotykamy wspaniałych ludzi, a wspólnie przemierzone kilometry cementują przyjaźnie i sprawiają, że wcale nie chcemy się rozstawać po powrocie. Dzięki temu Czwórka trwa nieprzerwanie już przez 60lat. 
+
+
+
+              </p>
+        </div>
+
+    </div>
+
+{% endblock %}

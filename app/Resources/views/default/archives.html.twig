@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div class="navbar-header2">
+
+        <div class="center-block">
+
+            <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+         <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+    {%  for key, article in wpisy %}
+
+        <div class="single-post">
+
+
+
+            <div class="picture-single">
+                <a href="#"><img src="/uploads/pictures/{{ article.picture }}" width="300" height="200"   /> </a>
+            </div>
+
+            <div class="major">
+            <div class="single-title">
+            <h1>{{ article.title}}</h1>
+            </div>
+            </br>
+            <div class="single-text">
+            <p>{{ article.text[:500] ~ '...' }} </p>
+            </div>
+            </br>
+                <a href="{{ path('article_next', {'xx': article.id}) }}">     CZYTAJ CAŁOŚĆ </a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    </div>
+
+{% endblock %}

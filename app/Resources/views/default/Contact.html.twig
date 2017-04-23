@@ -1,0 +1,73 @@
+{# empty Twig template #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="navbar-header2">
+
+        <div class="center-block">
+
+            <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+           <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+        </div>
+
+    </div>
+
+
+    <div class="main-content">
+        {% for msg in app.session.flashBag.get('success') %}
+            <div class="alert alert-success">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+        <h1> Kontakt  </h2>
+            <div class="field">
+
+                {{ form_start(MailForm)  }}
+                <div class="mail-row">
+                    {{ form_row(MailForm.Email ,
+                    {
+                        'label':'Email',
+                        'attr': {
+                        'class': 'power-control'}
+                    }) }}
+                    </br>
+                    {{form_row(MailForm.Temat,
+                    {
+                        'label':'Temat',
+                        'attr': {
+                        'class': 'power-control'}
+                    }) }}
+                    </br>
+                    <button type="submit" class="btn btn-success"> Wyślij Wiadomość </button>
+
+                </div>
+
+                <div class="tekst-row">
+                    {{form_row(MailForm.Tekst,
+                    {
+                        'label':'Tekst',
+                        'attr': {
+                        'class': 'power-control-2'}
+                    }) }}
+                </div>
+
+                </br>
+
+                {{ form_end(MailForm) }}
+            </div>
+    </div>
+
+
+
+
+{% endblock %}

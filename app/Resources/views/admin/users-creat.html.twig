@@ -1,0 +1,40 @@
+{# empty Twig template #}
+
+
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/css/admin/Article.css') }}" />
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="Article-navbar">
+        Create User !!!!
+    </div>
+    </br>
+  
+  </br>
+
+
+    {{ form_start(UserForm)  }}
+    </br>
+    {{ form_row(UserForm.nick) }}
+    </br>
+
+    {{ form_row(UserForm.pass,
+    {
+        'attr': {
+        'class': 'form-control'}
+    }) }}
+    </br>
+
+
+    <button type="submit" class="btn btn-success"> Dodaj </button>
+
+    {{ form_end(UserForm)  }}
+
+{% endblock %}

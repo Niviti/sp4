@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/css/admin/Index.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+<div class="Text-Index">Najnowsze</div>
+<div class="row">
+
+    {%  for key, article in article_new %}
+        <div class="col-lg-4 margin-top">
+
+            <div class="pictures">
+                <a href="#"><img src="/uploads/pictures/{{ article.picture }}" width="300" height="400"   /> </a>
+
+            </div>
+
+            <h1>{{ article.title}}</h1>
+            <p>{{ article.text[:500] ~ '...' }} </p>
+
+            <div class="Button-header">
+                <a href="{{ path('article_next', {'id': article.id}) }}">     <button type="button" class="button-action">CZYTAJ CAŁOŚĆ</button> </a>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+</div>
+
+{% endblock %}

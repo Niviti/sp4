@@ -1,0 +1,81 @@
+{# empty Twig template #}
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+
+    <div class="navbar-header">
+        <div class="center-block">
+            <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+          <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+        </div>
+    </div>
+
+
+<div class="container">
+<div class="col-lg-8">
+    <div class="Journal_next_picutre">
+        <img src="/uploads/pictures/{{ article.picture }}" width="100%" height="500px"  /> 
+        </br>
+        <div class="title"> <h2>{{ article.title }} </h2> </div>
+        
+         
+      {% autoescape false %}
+        <div class="text"> {{ article.text|raw }} </div>
+          {% endautoescape %}
+
+            </div>
+
+ <div id="disqus_thread"></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://sp4-pl.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+    <div class="col-lg-4 navbar-lead">
+    <div class="navbar-style">
+        Archiwum</div>
+
+        <ul class="list-Archives">
+             <li>    <a href="{{ path('archives', {'xx': 1}) }}">Styczeń {{ tablica[0] }} </li></a> 
+            <a href="{{ path('archives', {'xx': 2}) }}">  <li>   Luty  {{ tablica[1] }} </li></a>
+            <a href="{{ path('archives', {'xx': 3}) }}">  <li>  Marzec  {{ tablica[2] }} </li></a>
+            <a href="{{ path('archives', {'xx': 4}) }}">  <li>  Kwiecień  {{ tablica[3] }} </li></a>
+            <a href="{{ path('archives', {'xx': 5}) }}">  <li>  Maj  {{ tablica[4] }} </li></a>
+            <a href="{{ path('archives', {'xx': 6}) }}">  <li>  Czerwiec  {{ tablica[5] }} </li></a>
+            <a href="{{ path('archives', {'xx': 7}) }}">  <li>  Lipiec  {{ tablica[6] }} </li></a>
+            <a href="{{ path('archives', {'xx': 8}) }}">  <li>  Sierpień  {{ tablica[7] }}  </li></a>
+            <a href="{{ path('archives', {'xx': 9}) }}">  <li>  Wrzesień  {{ tablica[8] }} </li></a>
+            <a href="{{ path('archives', {'xx': 10}) }}">  <li>  Pazdziernik  {{ tablica[9] }} </li></a>
+            <a href="{{ path('archives', {'xx': 11}) }}">  <li>  Listopad  {{ tablica[10] }}  </li></a>
+            <a href="{{ path('archives', {'xx': 12}) }}">  <li>  Grudzień  {{ tablica[11] }} </li></a>
+        </ul>
+
+        <div class="navbar-style">
+         Instagram
+        </div>
+
+        <!-- SnapWidget -->
+     <iframe src="https://snapwidget.com/embed/371445" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:350px; height:390px; margin-top: 40px"></iframe>
+    </div>
+    </div>
+
+    <!-- End of Container -->
+
+{% endblock %}

@@ -1,0 +1,49 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+
+
+    <a href="{{ path('users-creat') }}"> <button type="button" class="btn btn-primary" style="margin-left:110px; margin-top: 50px; margin-bottom: 50px">Dodaj Usera</button> </a>
+
+    <div class="container color-fonts">
+<table class="table table-striped">
+    <tr>
+        <th> id      </th>
+        <th> name   </th>
+          <th> Edit   </th>
+            <th> Delete   </th>
+    </tr>
+
+{%   for user in users  %}
+
+
+<tr>
+    <td>
+    {{   user.id  }}
+    </td>
+    <td>
+   {{  user.nick }}
+</td>
+    <td>
+     <span class="Parent">   <a href="{{ path('users-edit', {'id':  user.id}) }}" class="btn btn-xs btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a>   </span>
+    </td>
+    <td>
+      <span class="Parent">    <a href="{{ path('users-delete', {'id': user.id}) }}" class="btn btn-xs btn-success"><i class="fa fa-times" aria-hidden="true"></i></a> </span>
+    </td>
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

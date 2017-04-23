@@ -1,0 +1,41 @@
+
+{%  extends 'base.html.twig'  %}
+
+
+
+   {% block body %}
+
+
+
+       <div class="navbar-header2">
+           <div class="center-block">
+           <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+            <span id="text" style="display:none;"> {{ length }} </span>
+            <ol class="nav-header-list">
+                       <li><a href="{{ path('homepage')   }}">Home</a></li>
+                       <li><a href="{{  path('about')  }}">O nas</a></li>
+                       <li><a href="{{  path('gallery')  }}">Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">Kontakt</a></li>
+            </ol>
+            </div>
+            </div>
+
+      <div class="gallery"> Galeria  </div>
+      <div class="container-black">
+      {% for i in 0..length  %}
+             <a  data-title="Zobacz Więcej" alt="{{ zdjecia[i] }}" name="{{i}}" class="title fade-in middle overlay galeria-open">
+             <img id="{{ i }}" src="uploads/photos/{{name}}/zdjecia/{{ zdjecia[i] }}" alt="{{ i }}" width="375" height="200" />
+             </a>
+      {% endfor %}
+      </div>
+
+       <div class="absolute" alt="{{ name }}">
+       <i class="fa fa-times galeria-close" aria-hidden="true" style="font-size: 61px;position: absolute; top:0px; right:10px ; cursor:pointer"> </i>
+       
+        <div id="switch-bar"> <i class="icon-left-open switch-left" > </i>   <i class="icon-right-open switch-right"> </i>       </div>
+       </div>
+
+  <div class="_3ixn"> </div>
+
+   {% endblock %}
+

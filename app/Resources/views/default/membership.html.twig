@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="navbar-header2">
+
+    <div class="center-block">
+
+        <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+    <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+    </div>
+</div>
+    <div class="container">
+
+        <div  style="margin-top:100px">
+            <h1> Członkostwo  </h1>
+        </div>
+        <div class="field">
+            <p> 
+Uwielbiasz piesze wędrówki, lasy i górskie szlaki? Chcesz poznawać ciekawych ludzi? U nas będziesz się czuł świetnie! Zapraszamy na czwartkowe spotkania, poznamy się bliżej i zaplanujemy wspólny wypad.
+</br>
+</br>
+Jeśli nie zacząłeś jeszcze przygody z podróżowaniem, a masz chęć - przyłącz się do nas. Pokażemy ci jak wędrowanie wzbogaca umysł i ciało. Z bardziej przyziemnych rzeczy – nauczymy cię używać kompasu i mapy oraz poruszać się w trudnym terenie w sposób bezpieczny i dający frajdę!
+</br>
+</br>
+Znajdziesz nas w prawej podkówce na starym kampusie, w czwartki o 20. Śmiało pisz też na skpczworka44@gmail.com lub przez facebooka.
+              </p>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

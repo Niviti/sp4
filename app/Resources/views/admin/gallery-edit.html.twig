@@ -1,0 +1,25 @@
+{# empty Twig template #}
+
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="Article-navbar">
+        Edit photo !!!!
+    </div>
+    </br>
+    {{ form_start(galleryForm)  }}
+
+    {{ form_row(galleryForm.photo) }}
+    </br>
+
+
+    </br>
+
+    <button type="submit" class="btn btn-success"> Dodaj </button>
+
+    {{ form_end(galleryForm)  }}
+
+{% endblock %}

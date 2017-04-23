@@ -1,0 +1,25 @@
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+{% block body %}
+
+<div class="main-content">
+    {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+</div>
+
+    <a href="{{ path('articles') }}"> <button type="button" class="btn btn-primary">Artykuły</button> </a>
+
+    <a href="{{ path('gallery-admin') }}"> <button type="button" class="btn btn-primary">Galeria</button> </a>
+
+
+    <a href="{{ path('users') }}"> <button type="button" class="btn btn-primary">Użytkownicy</button> </a>
+
+{% endblock %}

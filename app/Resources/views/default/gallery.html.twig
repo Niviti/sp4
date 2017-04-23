@@ -1,0 +1,38 @@
+
+{%  extends 'base.html.twig'  %}
+
+
+
+   {% block body %}
+
+       <div class="navbar-header2">
+           <div class="center-block">
+           <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+       <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+           </div>
+
+       </div>
+
+
+       <div class="gallery"> Galeria  </div>
+       <div class="container-black style="margin-bottom: 50px">
+         {% for photo in zdjecia  %}
+             <a href="{{ path('gallery-single', {'name': photo.name}) }}"  data-title="{{ photo.name  }}" alt="{{ photo.id  }}" class="title fade-in middle overlay">
+                 <img src="/bundles/css/gallery/{{ photo.photo }}" alt="" width="375" height="200" />
+             </a>
+           {% endfor %}
+       </div>
+
+       <div class="absolute">
+          <i class="fa fa-times galeria-close" aria-hidden="true" style="font-size: 61px;position: absolute; top:0px; right:10px ; cursor:pointer"> </i>
+       </div>
+
+
+   {% endblock %}
+

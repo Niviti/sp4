@@ -1,0 +1,56 @@
+{# empty Twig template #}
+
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/css/admin/Article.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+    <div class="Article-navbar">
+        Edit Article !!!!
+    </div>
+
+
+ <button  class="btn btn-success wood"> Dodaj odnośnik do zdjęć</button>
+ 
+
+ <select id="Selector">
+
+ {% for i in 0..length  %}
+ <option value="{{opcje[i]}}">{{opcje[i]}}</option>
+ {% endfor %}
+
+ </select>
+
+
+    </br>
+
+    </br>
+    {{ form_start(ArticleForm)  }}
+
+    {{ form_row(ArticleForm.Picture) }}
+    </br>
+
+    {{ form_row(ArticleForm.Title,
+    {
+        'attr': {
+        'class': 'form-control'}
+    }) }}
+
+
+    {{ form_row(ArticleForm.Text,
+    {
+        'attr': {
+        'class': 'form-control'}
+    }) }}
+    </br>
+
+    <button type="submit" class="btn btn-success"> Dodaj </button>
+
+    {{ form_end(ArticleForm)  }}
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('bundles/css/Index2.css') }}"/>
+    {% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="navbar-header">
+
+        <div class="center-block">
+
+            <a href=" {{  path('membership') }}">   <button class="mybutton"> CZŁONKOSTWO </button> </a>
+
+            <ol class="nav-header-list">
+                      <li>    <a href="{{ path('homepage')   }}">Home </a></li>
+                       <li>    <a href="{{  path('about')  }}"> O nas</a></li>
+                       <li> <a href="{{  path('gallery')  }}">  Galeria</a></li>
+                       <li><a href="{{ path('Kontakt')   }}">  Kontakt</a></li>
+            </ol>
+        </div>
+
+    </div>
+
+
+
+    <!--    <div class="slider">
+            tu bedzie slider mocy
+            <div class="arrows">    <i class="icon-left-open">  </i> 1/3  <i class="icon-right-open"> </i>   </div>
+        </div>
+                               -->
+    <div id="block2">
+        <div id="slider">
+            <ul class="slides">
+                <li class="slide slide1">   </li>
+                <li class="slide slide2"> <div class="Text-header-A"> 4 kwadraty on the road <div class="Text-header-B">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, posuere eget neque id, varius mattis nisi.  </div> </div></li>
+                <li class="slide slide3"> <div class="Text-header-A"> Kacper to jest podróżnik <div class="Text-header-B">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, posuere eget neque id, varius mattis nisi.  </div> </div></li>
+                <li class="slide slide1"> </li>
+                <li class="slide slide2"> <div class="Text-header-A"> 4 kwadraty on the road <div class="Text-header-B">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, posuere eget neque id, varius mattis nisi.  </div> </div></li>
+                <li class="slide slide3"> <div class="Text-header-A"> Kacper to jest podróżnik <div class="Text-header-B">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus ante, posuere eget neque id, varius mattis nisi.  </div></div></li>
+                <li class="slide slide1"> </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="arrows">    <i class="icon-left-open left" >  </i> <div class="value" style="display:inline"> 1/3 </div>  <i class="icon-right-open right"> </i>   </div>
+
+
+
+        <div class="container" style="margin-bottom:100px">
+            <div class="Text"> Najnowsze </div>
+        <div class="articles">
+            {% for article in articles %}
+                <div class="col-lg-4 ">
+                    <div class="Package"> <a href="/article/{{ article.id }}"  class="orban">
+                            <img src="/uploads/pictures/{{ article.picture }}"  >  </a></div>
+                    <a href="/article/{{ article.id }}">   <span class="atak"> <h1>{{ article.title }}</h1> </span> </a>
+                 {% autoescape 'html' %}
+                    <p>{{ article.text[:500]|replace({"<br>": "" })  ~ '...' }} </p>
+                 {% endautoescape %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="FaceBook">
+        <div id="formularzX">
+            <div id="fb_rozwin"><!-- Facebook -->
+                <div id="fb_zawartosc">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fskp4czworka%2F%3Ffref%3Dts%26__mref%3Dmessage_bubble&tabs=timeline&width=300&height=390&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="390" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    <!-- Tego nie wolno usuwac -->
+                    <div style="text-align:center; font-size:xx-small">
+                    </div>
+                    <!-- Tego nie wolno usuwac -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="testX">
+        <div id="Logo1">
+            <a href="#" class="tilelink"> <img src="fb-logo.png"/>  </a>
+        </div>
+        <div id="Logo2">
+            <a href="#" class="tilelink"> <img src="fb-logo.png"/>    </a>
+        </div>
+
+    </div>
+
+
+{% endblock %}
+
+

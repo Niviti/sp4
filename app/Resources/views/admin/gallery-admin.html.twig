@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+     {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+    {% endfor %}
+   
+  <a href="{{ path('open-source') }}"> <button type="button" class="btn btn-primary">Galeria</button> </a>
+
+ <div class="container color-fonts">
+<table class="table table-striped">
+    <tr>
+        <th> id      </th>
+        <th>  Name   </th>
+        <th>  Edit   </th>
+        <th>  Cancel </th>
+        <th>  Update photos </th> 
+    </tr>
+
+   
+ {%   for gallery in Galeria  %}
+
+
+<tr>
+    
+    <td>
+    {{   gallery.id  }}
+    </td>
+    
+    <td>
+   {{  gallery.name }}
+</td>
+
+    <td>
+       <span class="Parent"> <a href="{{ path('gallery-Edit', {'id': gallery.id}) }}" class="btn btn-xs btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></a> </span>
+    </td>
+
+    <td>
+      <span class="Parent">  <a href="{{ path('gallery-Cancel', {'id': gallery.id}) }}" class="btn btn-xs btn-success"><i class="fa fa-times" aria-hidden="true"></i></a> </span>
+    </td>
+
+    <td>
+       <span class="Parent">  <a href="{{ path('update-photos', {'name': gallery.name}) }}" class="btn btn-xs btn-success"><i class="fa fa-camera" aria-hidden="true"></i></a> </span>
+    </td>
+
+        </tr>
+    {%   endfor %}
+</table>
+
+    </div>
+
+{% endblock %}
