@@ -1,6 +1,5 @@
 imports:
     - { resource: config.yml }
-    - { resource: config_prod_secrets.php }
 
 #doctrine:
 #    orm:
