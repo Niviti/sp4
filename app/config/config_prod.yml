@@ -1,6 +1,6 @@
 imports:
     - { resource: config.yml }
-    - { resource: config_prod_secrets.php }
+  #  - { resource: config_prod_secrets.php }
 #doctrine:
 #    orm:
 #        metadata_cache_driver: apc
