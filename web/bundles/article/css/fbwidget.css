@@ -1,0 +1,110 @@
+
+
+#formularzX
+{
+    height:390px;
+    width:0px;
+    right:0px;
+    position: fixed;
+    background-color:#ffffff	;
+}
+
+#fb:likebox {
+    height: 400px;
+    width: 200px;
+    position: fixed;
+
+    top: 50%;
+
+
+    border-color: #335F9D;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    padding: 5px;
+    z-index: 6;
+}
+
+
+#fb_zawartosc
+{
+    display:none;
+}
+
+#FaceBook
+{
+    width:0px ;
+    height:400px;
+    position:fixed;
+    top:200px;
+    right:1px;
+    background-color:#ffffff;
+    float:right;
+}
+/* Margin Top to 20px  */
+
+
+#Logo1
+{
+    right:0px;
+    background-color:#ffffff;
+    display:block ;
+    position:absolute;
+
+    /*   top:500px;
+       height:55px;
+       width:55px;
+       border-radius:0px 10px 10px 0px;
+       background-color:black;
+       position:absolute;
+       color:white;
+       margin-right:10px ;  */
+    border-radius:0px 0px 0px 0px;
+    /*   border-right:2px solid #ffffff; */
+    height:55px;
+    width:60px;
+    border-top-left-radius:2em;
+    border-bottom-left-radius:2em;
+
+}
+
+#Logo2
+{
+    right:0px;
+    background-color:#ffffff;
+    display:none ;
+    position:absolute;
+    /*   top:500px;
+       height:55px;
+       width:55px;
+       border-radius:0px 10px 10px 0px;
+       background-color:black;
+       position:absolute;
+       color:white;
+       margin-right:10px ;  */
+    border-radius:10px 0px 0px 0px;
+    /*   border-right:2px solid #ffffff;   */
+    height:55px;
+    width:60px;
+
+
+
+}
+
+#testX
+{
+    border-radius:0px 10px 10px 0px;
+    position:fixed;
+    right:0px;
+    color:white;
+    top:200px;
+    height:55px;
+    width:60px;
+
+}
+
+
+
+
+
+
+

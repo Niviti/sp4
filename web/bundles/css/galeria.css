@@ -1,0 +1,136 @@
+.absolute {
+  z-index: 3;
+  position: fixed;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 992px)  {
+  .absolute {
+    width: 60%;
+    left: 20%;
+    top: 5%;
+    height: 600px;
+    z-index: 3;
+  }
+}
+/*@media ultralarge {
+  .absolute {
+    top: 12.5% !important;
+    height: 800px !important;
+  }
+} */
+
+@media (min-width: 1px)
+{
+.container-black
+{
+    margin-bottom: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+@media (min-width: 768px)
+{
+.container-black
+{
+width: 750px;
+}
+}
+
+@media (min-width: 992px)
+{
+.container-black
+{
+width: 970px;
+}
+}
+
+
+@media (min-width: 1200px)
+{
+.container-black
+{
+width: 1170px;
+}
+}
+
+
+#switch-bar
+{
+position: relative;
+width: 100%;
+
+}
+
+@media (min-width: 0px)
+{
+.switch-left
+{
+position: absolute;
+left: 0px;
+font-size: 42px;
+top:290px;
+}
+}
+
+@media (min-width: 1500px)
+{
+.switch-left
+{
+top:400px;
+}
+} 
+.switch-left:hover
+{
+color: #FFFFFF;
+cursor: pointer;
+}
+
+@media (min-width: 0px)
+{
+.switch-right
+{
+position: absolute;
+right: 0px;
+font-size: 42px;
+top:290px;
+}
+}
+
+@media (min-width: 1500px)
+{
+.switch-right
+{
+  top:400px;
+}
+} 
+
+.switch-right:hover
+{
+color: #FFFFFF; 
+cursor: pointer;
+}
+
+.galeria-close:hover
+{
+color: #FFFFFF; 
+}
+
+
+._3ixn
+{
+display: none;
+bottom: 0;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+}
+
+.galeria-open:hover
+{
+cursor: pointer;
+}

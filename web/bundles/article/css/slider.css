@@ -1,0 +1,74 @@
+
+
+
+#slider {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider .slides {
+    display: block;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    height: 400px;
+}
+
+/* helper css, since we don't have images */
+.slide1 {background: red;}
+.slide2 {background: blue;}
+.slide3 {background: green;}
+.slide4 {background: purple;}
+.slide5 {background: pink;}
+
+#block
+{
+    margin: 0px;
+    padding: 0px;
+    position:relative;
+    width: 1400px;
+    height:300px;
+    background-color: #A651AD;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+#block2
+{
+    overflow: hidden;
+    width: 100%;
+    position:relative;
+}
+
+.neweage
+{
+    position: absolute;
+}
+.arrows
+{
+    font-size: 41px;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index:2;
+    top:420px;
+}
+
+.left:hover
+{
+   color: #C2A017 ;
+    cursor:pointer;
+}
+
+.right:hover
+{
+    color: #C2A017;
+    cursor:pointer;
+}

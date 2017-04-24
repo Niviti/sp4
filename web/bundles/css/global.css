@@ -1,0 +1,62 @@
+
+
+
+body
+{
+    padding:0px;
+    margin:0px;
+    background-color:#FFFFFF;
+    color: #0D0D19 !important;
+    font-family: 'Lora', serif;
+}
+
+a:link
+{
+    color: #0D0D19;
+    text-decoration: none;
+}
+
+a:visited
+{ 
+	color: #0D0D19; 
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #C2A017;
+    text-decoration: none;
+}
+
+a:active {
+    color: #0D0D19;
+}
+
+
+.Parent > a:link
+{
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+.Parent > a:visited
+{
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+.Parent > a:focused
+{
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+.Parent > a:hover
+{
+  color: #0D0D19;
+  text-decoration: none;
+
+}

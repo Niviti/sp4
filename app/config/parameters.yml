@@ -6,7 +6,7 @@ parameters:
     database_user: sphboaasnhttgt
     database_password: e983f411d0bfc99ca0fe8d1a6fd182d069f3d2bc445af8e31980e2568088be7a
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    mailer_host: ec2-54-228-182-57.eu-west-1.compute.amazonaws.com
+    mailer_user: sphboaasnhttgt
+    mailer_password: e983f411d0bfc99ca0fe8d1a6fd182d069f3d2bc445af8e31980e2568088be7a
     secret: ThisTokenIsNotSoSecretChangeIt

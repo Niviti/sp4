@@ -1,0 +1,1 @@
+.absolute{position:fixed;width:50%;background-color:#FFF;display: none;  background-repeat: no-repeat; background-position: center center!important;  background-size: cover!important; }@media only screen and (min-width:992px){.absolute{width:60%;left:20%;top:5%;height:600px}}@media only screen and (min-width:1600px){.absolute{top:12.5%!important;height:800px!important}}
